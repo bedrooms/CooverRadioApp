@@ -30,7 +30,7 @@
   <link href="css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css">
 </head>
 
-<body ng-app="cooverRadioApp" class="sticky-header left-side-collapsed" onload="initMap()">
+<body ng-app="cooverRadioApp" class="sticky-header left-side-collapsed">
   <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -42,10 +42,10 @@
 
       <!--logo and iconic logo start-->
       <div class="logo">
-        <h1><a href="index.html">Mosai<span>c</span></a></h1>
+        <h1><a href="index.html">Coove<span>r</span></a></h1>
       </div>
       <div class="logo-icon text-center">
-        <a href="index.html">M </a>
+        <a href="index.html">C </a>
       </div>
       <!-- /w3l-agile -->
       <!--logo and iconic logo end-->
@@ -54,7 +54,7 @@
         <!--sidebar nav start-->
         <ul class="nav nav-pills nav-stacked custom-nav">
           <li class="active"><a href="index.html"><i class="lnr lnr-home"></i><span>Home</span></a></li>
-          <li><a href="radio.html"><i class="camera"></i> <span>Radio</span></a></li>
+          <li><a href="#!radio"><i class="camera"></i> <span>Radio</span></a></li>
           <li><a href="#" data-toggle="modal" data-target="#myModal1"><i class="fa fa-th"></i><span>Apps</span></a></li>
           <li><a href="radio.html"><i class="lnr lnr-users"></i> <span>Artists</span></a></li>
           <li><a href="browse.html"><i class="lnr lnr-music-note"></i> <span>Albums</span></a></li>
@@ -181,10 +181,11 @@
             </script>
             <!-- //search-scripts -->
             <!---->
-            <div class="col-md-4 player">
+            <div class="col-md-4 player" ng-controller="MainCtrl as vm">
+              <a>Station Name </a>
               <div class="audio-player">
-                <audio id="audio-player" controls="controls">
-                  <source src="media/Blue Browne.ogg" type="audio/ogg"></source>
+                <audio id="audio-player" controls="controls">                  
+                  <source src="{{vm.trackToPlay}}" type="audio/aac"></source>
                   <source src="media/Blue Browne.mp3" type="audio/mpeg"></source>
                   <source src="media/Georgia.ogg" type="audio/ogg"></source>
                   <source src="media/Georgia.mp3" type="audio/mpeg"></source>
@@ -245,18 +246,17 @@
 
             </div>
             <div class="clearfix"> </div>
-          </div>        
+          </div>
           <!-------->
-        </div>        
+        </div>
         <div class="clearfix"></div>
       </div>
-        <div class="container">
-            <div ng-view=""></div>
-          </div>
+      <div class="container">
+        <div ng-view=""></div>
+      </div>
       <!--notification menu end -->
     </div>
   </section>
-
 
   <!--body wrapper end-->
   <div class="footer">
@@ -352,10 +352,13 @@
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
   <script src="scripts/app.js"></script>
   <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/radioController.js"></script>
+  <script src="scripts/playerService.js"></script>
   <script src="scripts/controllers/about.js"></script>
   <script src="js/jquery.nicescroll.js"></script>
   <script src="js/scripts.js"></script>
   <script src="js/responsiveslides.min.js"></script>
+  <script src="js/bootstrap.js"></script>
   <!-- script for play-list -->
   <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
   <script type="text/javascript" src="js/jplayer.playlist.min.js"></script>

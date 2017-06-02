@@ -24,12 +24,12 @@ angular
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
-        controllerAs: 'main'
+        controllerAs: 'vm'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .when('/radio', {
+        templateUrl: 'views/radioview.html',
+        controller: 'radioCtrl',
+        controllerAs: 'vm'
       })
       .otherwise({
         redirectTo: '/'
