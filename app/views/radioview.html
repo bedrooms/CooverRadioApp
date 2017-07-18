@@ -1,9 +1,5 @@
 <div id="page-wrapper">
     <div class="inner-content">
-        <li ng-repeat="p in vm.stationData" >
-            <a>{{p.name}}</a>
-
-        </li>
         <div class="music-browse">
             <div class="browse">
                 <!--//discover-view-->
@@ -15,15 +11,15 @@
                         </a>
                         <div class="clearfix"> </div>
                     </div>
-                    <div class="col-md-3 artist-grid">
-                        <a href="single.html"><img src="images/v11.jpg" title="allbum-name"></a>
-                        <div class="inner-info">
-                            <h5>Pop</h5>
-                        </div>
+                    <div class="col-md-3 artist-grid" ng-repeat="station in vm.stationData">                        
+                        <img src="{{station.uriImage}}" title="{{station.title}}">
+                        <a href="blank"> <p class="absolute-text">{{station.name}}</p></a>
+                        <i class="glyphicon glyphicon-play-circle" ng-click="vm.setTrack(station)"></i>
                     </div>
-                    <div class="col-md-3 artist-grid">
-                        <img src="images/v22.jpg" title="allbum-name">                      
-                        <i class="glyphicon glyphicon-play-circle" ng-click="vm.setTrack('newtrack')"></i>
+                    <!-- <div class="col-md-3 artist-grid">
+                        <img src="images/v22.jpg" title="allbum-name">    
+                         <p class="absolute-text">Radio Tolima 107.8 FM</a> </p>      
+                        <i class="glyphicon glyphicon-play-circle" ng-click="vm.setTrack('http://i60.letio.com/5016.aac')"></i>
                     </div>
                     <div class="col-md-3 artist-grid">
                         <a href="single.html"><img src="images/v33.jpg" title="allbum-name"></a>
@@ -84,7 +80,7 @@
                         <div class="inner-info">
                             <h5>Pop</h5>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="clearfix"> </div>
                 </div>
             </div>

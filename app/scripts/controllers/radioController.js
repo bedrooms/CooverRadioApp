@@ -9,8 +9,8 @@ app.controller('radioCtrl', ['$http','$rootScope', 'playerSvc', 'stationSvc', fu
         vm.stationData = data.data.stationsData;
     });
 
-  vm.setTrack = function (track) {
-    playerSvc.setPlayerTrack("i60.letio.com/9108.aac2")
+  vm.setTrack = function (stationData) {
+    playerSvc.setPlayerTrack(stationData)
   }
 
 }]);

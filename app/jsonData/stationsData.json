@@ -1,14 +1,20 @@
 {
 	"stationsData": [{
-			"name": "Olimpica Stereo Cartagena",
-			"uriTrack": "Full Time",
-			"uriImage": "Associate must have experience and appropriate certification\u000d\u000a",
+			"id" : 1,
+			"name": "Olimpica Stereo Cartagena 90.5 FM",
+			"uriTrack": "http://i60.letio.com/9108.aac",
+			"typeAudio" : "audio/aac",
+			"title" : "Olimpica",			
+			"uriImage": "images/olimpica.png",
 			"location":""
 			
 		}, {
-			"name": 1,
-			"uriTrack": "Full Time",
-			"uriImage": "Associate must have experience and appropriate certification\u000d\u000a",
+			"id" : 2,
+			"name": "Radio Tolima 107.9 FM",
+			"uriTrack": "http://i60.letio.com/5016.aac",
+			"typeAudio" : "audio/aac",
+			"title" : "RadioTolima",
+			"uriImage": "images/CooverStation.jpg",
 			"location":""
 		}
 	]

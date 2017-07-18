@@ -182,13 +182,10 @@
             <!-- //search-scripts -->
             <!---->
             <div class="col-md-4 player" ng-controller="MainCtrl as vm">
-              <a>Station Name </a>
+              <h4>{{stationName}}</h4>
               <div class="audio-player">
-                <audio id="audio-player" controls="controls">                  
-                  <source src="{{vm.trackToPlay}}" type="audio/aac"></source>
-                  <source src="media/Blue Browne.mp3" type="audio/mpeg"></source>
-                  <source src="media/Georgia.ogg" type="audio/ogg"></source>
-                  <source src="media/Georgia.mp3" type="audio/mpeg"></source>
+                <audio id="audio-player" autoplay controls="controls">
+                  <source src="{{trackToPlay}}" type="audio/aac"></source>
                 </audio>
               </div>
               <!---->
